@@ -138,7 +138,8 @@
             <div class="rsvp-content">
                 <h2 class="section-title">RSVP</h2>
                 <p class="rsvp-description">Please confirm your attendance by filling out the form below</p>
-                <form class="rsvp-form" action="https://formspree.io/f/mjkrpbov" method="POST">
+                <form class="rsvp-form" name="rsvp" method="POST" data-netlify="true" action="thanks.html">
+                    <input type="hidden" name="form-name" value="rsvp">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Full Name" required>
                     </div>
@@ -176,4 +177,3 @@
     <script src="script.js"></script>
 </body>
 </html> 
-<!-- Done -->
