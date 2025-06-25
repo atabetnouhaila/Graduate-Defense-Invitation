@@ -282,4 +282,20 @@ function createCountdown() {
 }
 
 // Initialize countdown when page loads
-document.addEventListener('DOMContentLoaded', createCountdown); 
+document.addEventListener('DOMContentLoaded', createCountdown);
+
+// Google Forms RSVP integration
+const googleForm = document.getElementById('custom-rsvp-form');
+if (googleForm) {
+    googleForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(googleForm);
+        fetch('https://docs.google.com/forms/d/e/1FAIpQLSe_PgozZrOKggZIyHtMq9285owfGcGm0WiNDpTceuf0ZH7svQ/formResponse', {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formData
+        }).then(() => {
+            window.location.href = 'thanks.html';
+        });
+    });
+} 

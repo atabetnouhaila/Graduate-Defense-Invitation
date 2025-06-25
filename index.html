@@ -138,23 +138,22 @@
             <div class="rsvp-content">
                 <h2 class="section-title">RSVP</h2>
                 <p class="rsvp-description">Please confirm your attendance by filling out the form below</p>
-                <form class="rsvp-form" name="rsvp" method="POST" data-netlify="true" action="/thanks.html">
-                    <input type="hidden" name="form-name" value="rsvp">
+                <form class="rsvp-form" id="custom-rsvp-form">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        <input type="text" name="entry.2106533898" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        <input type="email" name="entry.768495032" placeholder="Email Address" required>
                     </div>
                     <div class="form-group">
-                        <select id="attendance" name="attendance" required>
+                        <select name="entry.447681740" required>
                             <option value="">Will you attend?</option>
-                            <option value="yes">Yes, I will attend</option>
-                            <option value="no">No, I cannot attend</option>
+                            <option value="Yes, I will attend">Yes, I will attend</option>
+                            <option value="No, I cannot attend">No, I cannot attend</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Any special requirements or comments"></textarea>
+                        <textarea name="entry.486079987" placeholder="Any special requirements or comments"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit RSVP</button>
                 </form>
